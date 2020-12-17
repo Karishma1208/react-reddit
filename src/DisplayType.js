@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
 const DisplayType = ({ displayType, handleChange }) => {
     return (
         <div className='DisplayType'>
-            Display:
+            Listed Contents:
             <select value={displayType} onChange={handleChange}>
                 <option value='All'>All</option>
-                <option value='Top'>Top 20</option>
+                <option value='Top'>Top 10</option>
             </select>
         </div>
     );

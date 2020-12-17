@@ -1,7 +1,3 @@
-/*
- * Utility functions for displaying and manipulating topics.
- */
-
 // Curried function that returns a function to sort topics.
 const getSortedTopics = comparison =>
     topics => {
@@ -46,7 +42,7 @@ const replaceTopic = (topics, topic) => {
 const TopicUtil = {
     getTop20TopicsSortedByVotes(topics) {
         const sortedTopics = getTopicsSortedByVotes(topics);
-        return sortedTopics.slice(0, 20);
+        return sortedTopics.slice(0, 10);
     },
 
     getAllTopicsSortedByVotes(topics) {

@@ -4,7 +4,6 @@ import loadInitialTopics from './database';
 
 const username = 'guest';
 
-// Higher order component that composes a component and adds data access functions to it.
 // This is the API to the data store.
 const withDataStore = (WrappedComponent) => {
     return class extends Component {
@@ -62,7 +61,6 @@ const withDataStore = (WrappedComponent) => {
                 TopicUtil.getAllTopicsSortedByVotes(topics);
 
             // The wrapped component uses 'api' prop to access data store.
-            // We only pass through any additional props.
             return <WrappedComponent api={this.api}
                 topics={sortedTopics}
                 displayType={displayType}
